@@ -1214,6 +1214,7 @@ nav.navbar {
   overflow-y: hidden;
   width: fit-content;
   margin: auto;
+  max-width: 100%;
 }
 
 .projects .nav-pills::-webkit-scrollbar {
@@ -1596,16 +1597,30 @@ nav.navbar {
 
 .testimonials .card {
   padding: 0.75rem;
+  border-top: 4px solid var(--main);
+  border-radius: 1.25rem;
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  -ms-border-radius: 1.25rem;
+  -o-border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.testimonials.inHome .card {
+  box-shadow: 0 2px 8px 0 rgba(17, 24, 39, 0.12);
+  overflow: visible;
+  scale: 0.9;
+  border: unset;
   border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   -moz-border-radius: 1.25rem;
   -ms-border-radius: 1.25rem;
   -o-border-radius: 1.25rem;
-  box-shadow: 0 2px 8px 0 rgba(17, 24, 39, 0.12);
-  overflow: visible;
-  scale: 0.9;
 }
-.testimonials .card::before {
+.testimonials.inHome .card::before {
   content: "";
   position: absolute;
   width: calc(100% + 2rem);
@@ -1628,7 +1643,7 @@ nav.navbar {
   -o-border-radius: 2rem;
 }
 
-.testimonials .testimonial-image {
+.testimonials.inHome .testimonial-image {
   border-radius: 1.25rem;
   overflow: hidden;
   -webkit-border-radius: 1.25rem;
@@ -1636,7 +1651,7 @@ nav.navbar {
   -ms-border-radius: 1.25rem;
   -o-border-radius: 1.25rem;
 }
-.testimonials .testimonial-content {
+.testimonials.inHome .testimonial-content {
   padding: 2.2rem 1.85rem;
   border-radius: 2rem;
   border: 1px solid #d1e0ff;
@@ -1653,7 +1668,7 @@ nav.navbar {
   flex-direction: column;
 }
 
-.testimonial-header {
+.testimonials.inHome .testimonial-header {
   border-bottom: 2px solid rgba(13, 7, 25, 0.08);
   padding-bottom: 0.3rem;
 }
@@ -1672,6 +1687,36 @@ nav.navbar {
 .testimonial-audio {
   width: fit-content;
 }
+
+.testimonials.all .card{
+  text-align: center;
+}
+.testimonials.all .testimonial-image {
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: cover;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 2px solid var(--main);
+  padding: 4px;
+}
+.testimonials.all .testimonial-image img{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: contain;
+}
+
+.testimonials.all
+.testimonials.all
+
 /* -- FQA -- */
 .FQA .accordion-item {
   margin-bottom: 1rem;
