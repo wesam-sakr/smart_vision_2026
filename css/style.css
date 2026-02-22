@@ -755,43 +755,6 @@ nav.navbar {
   -o-border-radius: 2.5rem;
   aspect-ratio: 16 / 7;
   object-fit: cover;
-  /* margin-top: 2.5rem; */
-}
-[dir="rtl"]
-  .breadcrumbs
-  .breadcrumb-wrapper
-  .breadcrumb-cnt
-  .breadcrumb-list
-  img {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-}
-.breadcrumbs::before,
-.breadcrumbs::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 315px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  background: #32f8bd30;
-  z-index: -1;
-  filter: blur(50px);
-}
-.breadcrumbs::before {
-  top: -98%;
-  inset-inline-end: -10%;
-}
-.breadcrumbs::after {
-  bottom: -65%;
-  inset-inline-start: -12%;
 }
 
 #canvas {
