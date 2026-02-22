@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Vision</title>
+    <link rel="icon" href="images/fav_icon.svg" />
+
+    <meta
+      name="keywords"
+      content="شركة تصميم مواقع إلكترونية, تصميم مواقع الإنترنت, تطوير المواقع الإلكترونية, تصميم مواقع متاجر إلكترونية, تطوير تطبيقات موبايل, تصميم مواقع احترافية, شركات برمجة المواقع, أفضل شركات تصميم المواقع, تصميم تطبيقات جوال, تصميم مواقع لشركات, حلول تصميم المواقع, تطوير واجهات المستخدم, تصميم مواقع وتسويق إلكتروني, برمجة تطبيقات الجوال, خدمات تطوير المواقع الإلكترونية, أفضل تصميم مواقع في الشرق الأوسط"
+    />
+
+    <meta
+      name="description"
+      content="شركة سعودية رائدة في تصميم وتطوير المواقع الإلكترونية والتطبيقات، نقدم حلولاً مبتكرة ومتطورة لعملائنا في مجال تصميم مواقع الإنترنت، تطوير التطبيقات، وتصميم المتاجر الإلكترونية. خدماتنا تركز على توفير أفضل التجارب الرقمية التي تواكب آخر التطورات في عالم التكنولوجيا."
+    />
+
+    <!-- Bootstrap  **== note: file needs to be changed according to the language ==**-->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+    <!-- icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- go to up -->
+    <div class="scrollUp" id="scrollUp">
+      <a href="#" aria-label="go to page up">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- fixed whatsapp icon -->
+    <div class="scrollUp whatsapp">
+      <a
+        href="https://api.whatsapp.com/send?phone=966568023169"
+        target="_blank"
+        aria-label="تواصل معنا عن الواتساب"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- ramadan intro  -->
+    <canvas id="canvas"></canvas>
+
+    <!-- navbar -->
+    <header>
+      <!-- Top Navigation -->
+      <div
+        class="top-nav position-relative d-none d-md-block mb-3 wow animate__fadeInDown"
+        data-wow-duration="1s"
+      >
+        <div
+          class="container-fluid position-relative z-3 d-flex align-items-center justify-content-between text-white"
+        >
+          <div class="date-time">
+            <div class="date">
+              <i class="bi bi-calendar"></i>
+              <time id="hijriDate"></time>
+            </div>
+
+            <div class="time">
+              <i class="fa-regular fa-clock"></i>
+              <time id="liveTime"></time>
+            </div>
+
+            <div class="zone">
+              التوقيت المحلي
+              <span>(مدينة الرياض)</span>
+            </div>
+          </div>
+          <div class="contacts">
+            <div class="phone">
+              <a href="tel:+96555777806" aria-label="Call us at +96555777806">
+                <i class="bi bi-telephone-outbound"></i>
+                +96555777806
+              </a>
+            </div>
+            <div class="email">
+              <a
+                href="mailto:hr@smartvision4p.com"
+                aria-label="Send an email to hr@smartvision4p.com"
+              >
+                <i class="bi bi-envelope"></i>
+                hr@smartvision4p.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar -->
+      <nav
+        id="mainNav"
+        class="navbar navbar-expand-lg navbar-light top-0 wow animate__fadeInDown"
+        data-wow-duration="1.5s"
+        data-bs-theme="light"
+      >
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0" href="index.html">
+              <img src="images/logo.svg" alt="Smart Vision logo" />
+            </a>
+            <div
+              class="collapse navbar-collapse justify-content-between align-items-center"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    aria-label="Go to home page"
+                    href="index.html"
+                  >
+                    الرئيسية
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="about.html"
+                    aria-label="Learn more about us"
+                  >
+                    من نحن؟
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="nav-link bg-transparent dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      خدماتنا
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >تصميم المواقع</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >تصميم المتاجر الالكترونية</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >برمجة تطبيقات الجوال</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >أنشاء هوية تجارية</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >التسويق من خلال محركات البحث</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >فيديو الموشن جرافيك</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >كتابة واضافة المحتوى</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="service-details.html"
+                          >دعم فني للمواقع الالكترونية</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="projects.html"
+                    aria-label="View our projects"
+                  >
+                    أعمالنا
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="blogs.html"
+                    aria-label="Read our latest blogs"
+                  >
+                    المدونة
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="contact.html"
+                    aria-label="Contact us for inquiries"
+                  >
+                    تواصل معنا
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="jobs.html"
+                    aria-label="Contact us for inquiries"
+                  >
+                    الوظائف
+                  </a>
+                </li>
+              </ul>
+              <ul class="Request-project d-flex align-items-center gap-2">
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link main"
+                    id="lang"
+                    aria-label="Switch to English"
+                  >
+                    EN
+                  </a>
+                </li>
+                <li class="separator d-none d-lg-flex align-items-center"></li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="request-project.html"
+                    aria-label="Request your project"
+                  >
+                    <span class="main-btn">
+                      <span> استشارة مجانية </span>
+
+                      <img
+                        src="images/icons/arrow.svg"
+                        alt="arrow right icon"
+                      />
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
+    <section>
+      <div class="container-fluid">
+        <div class="card-wrapper">
+          <!-- breadcrumb Section -->
+          <div class="breadcrumbs">
+            <div class="breadcrumb-wrapper">
+              <div class="overlay">
+                <div class="ln"></div>
+                <div class="ln"></div>
+                <div class="ln"></div>
+              </div>
+              <div class="breadcrumb-cnt">
+                <div class="title text-center  mb-md-5 mb-4">
+                  <small
+                    class="secName mx-auto mb-4 wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    تواصل معنـــــا
+                  </small>
+                  <h2
+                    class="secTitle wow animate__fadeInUp"
+                    data-wow-duration="1s"
+                  >
+                    كُن دائمًا على إطلاع
+                  </h2>
+                </div>
+                <div class="col-md-6 text-center mx-auto">
+                  <p>
+                    الآن وبكل سهولة فقط اكتب الايميل و رقم الجوال و ارسل لنا
+                    استفسارك او طلبك , و سوف يتم الرد عليكم في أقرب وقت.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- contact -->
+          <div class="contact-form">
+            <div class="card-wrapper-img">
+              <img src="images/contact.png" class="mb-4" alt="">
+            </div>
+            <h3 class="fs-4 main mb-4">
+              قم بإرسال مقتراحاتك الأن بمنتهي السهولة و سيتم التواصل معك
+            </h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الاسم"
+                    id="name"
+                    required
+                  />
+                  <span class="text-danger small" id="nameError"></span>
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="رقم الهاتف"
+                    id="phone"
+                    required
+                  />
+                  <span class="text-danger small" id="emailError"></span>
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                    id="email"
+                  />
+                  <span class="text-danger small" id="emailError"></span>
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="عنوان الموضوع"
+                    id="topic"
+                    required
+                  />
+                  <span class="text-danger small" id="emailError"></span>
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control"
+                    placeholder="رسالتك"
+                    rows="8"
+                    id="message"
+                    required
+                  ></textarea>
+                  <span class="text-danger small" id="messageError"></span>
+                </div>
+                <div class="col-auto ms-auto">
+                  <button
+                    type="submit"
+                    class="main-btn mt-4 mx-auto wow animate__fadeInUp"
+                    data-wow-duration="1s"
+                    aria-label="Submit your message to our team"
+                  >
+                    <span> أرسل الأن </span>
+                    <img src="images/icons/arrow.svg" alt="arrow right icon" />
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid">
+        <div class="footer-wrapper wow animate__fadeIn" data-wow-duration="3s">
+          <!-- القسم العلوي من الفوتر -->
+          <div class="main-footer">
+            <div class="row gy-4 justify-content-between">
+              <!-- شعار الشركة ومعلومات عامة -->
+              <div class="col-lg-3">
+                <div class="logo">
+                  <a href="index.html" aria-label="Go to home page">
+                    <img
+                      class="footer-brand"
+                      src="images/logo.svg"
+                      alt="Smart Vision logo"
+                    />
+                  </a>
+                  <p class="my-3">
+                    رؤيتك تبدأ بفكرة… ونحن نحولها إلى نجاح رقمي يواكب تطلعات
+                    السوق.
+                  </p>
+                  <div>
+                    <h5 class="footer-heading my-md-3">روابطنا متاجر الهاتف</h5>
+                    <ul class="apps-icons my-3 d-flex flex-column gap-2">
+                      <li>
+                        <a
+                          href="https://play.google.com/store/apps/dev?id=8697678374869740936"
+                          target="_blank"
+                          aria-label="Google Play"
+                        >
+                          <i class="fa-brands fa-google-play me-2"></i>
+                          <span>جوجل بلاي</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://apps.apple.com/eg/developer/amir-nageh/id1497851425"
+                          target="_blank"
+                          aria-label="Apple Store"
+                        >
+                          <i class="fa-brands fa-apple me-2"></i>
+                          <span>ابل استور</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav aria-label="Social Media Links">
+                    <ul class="social-icons">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/smartvision4p.eg"
+                          target="_blank"
+                          aria-label="Visit our Facebook page"
+                        >
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/smartvision.group"
+                          target="_blank"
+                          aria-label="Visit our Instagram page"
+                        >
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/smartvision4p-%D8%B4%D8%B1%D9%83%D8%A9-%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-a4627720a/"
+                          target="_blank"
+                          aria-label="Visit our LinkedIn page"
+                        >
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://x.com/SmartVision4p"
+                          target="_blank"
+                          aria-label="Visit our X Twitter page"
+                        >
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.pinterest.com/smartvision860/_created/"
+                          target="_blank"
+                          aria-label="Visit our pinterest page"
+                        >
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.behance.net/SmArtVision44p"
+                          target="_blank"
+                          aria-label="Visit our behance page"
+                        >
+                          <i class="fa-brands fa-behance"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/@smartvision4p"
+                          target="_blank"
+                          aria-label="Visit our youtube chanel"
+                        >
+                          <i class="fa-brands fa-youtube"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-auto">
+                <h4 class="footer-heading footer-pages-title">[روابط مهمة]</h4>
+                <nav aria-label="Site Pages">
+                  <ul>
+                    <li>
+                      <a href="about.html" aria-label="Learn more about us"
+                        >من نحن</a
+                      >
+                    </li>
+                    <li>
+                      <a href="services.html" aria-label="Explore our services"
+                        >خدماتنا</a
+                      >
+                    </li>
+                    <li>
+                      <a href="projects.html" aria-label="View our projects"
+                        >أعمالنا</a
+                      >
+                    </li>
+                    <li>
+                      <a href="blogs.html" aria-label="Read our latest blogs"
+                        >المدونة</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="contact.html"
+                        aria-label="Contact us for inquiries"
+                        >تواصل معنا</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="terms.html"
+                        aria-label="View terms and conditions"
+                        >سياسة الخصوصية</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-12 col-md-4 col-lg-auto">
+                <div class="d-flex gap-3 d-md-block">
+                  <div>
+                    <h4 class="footer-heading footer-contact-title">
+                      [تواصل معنا]
+                    </h4>
+                    <nav aria-label="Contact Information">
+                      <ul>
+                        <li>
+                          <h5>العنوان</h5>
+                          <p>السعودية - الكويت - مصر</p>
+                        </li>
+                        <li>
+                          <h5>رقم الهاتف</h5>
+                          <a
+                            href="tel:+966568023169"
+                            aria-label="Call us at +966 568 023 169"
+                          >
+                            +966 568 023 169
+                          </a>
+                          <a
+                            href="tel:+966568023169"
+                            aria-label="Call us at +966 568 023 169"
+                          >
+                            +966 568 023 169
+                          </a>
+                        </li>
+                        <li>
+                          <h5>البريد الالكتروني</h5>
+                          <a
+                            href="mailto:hr@smartvision4p.com"
+                            aria-label="Send an email to hr@smartvision4p.com"
+                          >
+                            hr@smartvision4p.com
+                          </a>
+                          <a
+                            href="mailto:sales@smartvision4p.com"
+                            aria-label="Send an email to sales@smartvision4p.com"
+                          >
+                            sales@smartvision4p.com
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-auto">
+                <h4 class="footer-heading footer-links-title">
+                  [السجل التجاري]
+                </h4>
+                <p class="cer_num">4030404749</p>
+                <div class="approved d-flex align-items-center gap-3">
+                  <img src="images/cer.png" alt="السجل التجاري" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- القسم السفلي من الفوتر -->
+          <div class="sub-footer py-3">
+            <div
+              class="d-flex flex-column-reverse flex-md-row gap-3 align-items-center justify-content-center justify-content-md-between"
+            >
+              <p>©Copyright 2026 - designed by smart vision </p>
+              <div class="payment-images">
+                <img
+                  src="images/footer-card.svg"
+                  alt="Available payment methods include PayPal, Mada, Mastercard, Visa, Apple Pay, and bank transfer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- WOW -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
