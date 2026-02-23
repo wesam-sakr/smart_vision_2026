@@ -388,6 +388,28 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  $(".categories .owl-carousel").owlCarousel({
+    margin: 8,
+    responsiveClass: true,
+    rtl: dirAr,
+    nav: false,
+    dots: false,
+    autoWidth:true,
+    loop: true,
+    animateIn: "fadeInLeft",
+    responsive: {
+      0: {
+        items: 3,
+      },
+      600: {
+        items: 5,
+      },
+      1000: {
+        items: 9,
+      },
+    },
+  });
+
   const testimonialsOwl = $(".testimonials .owl-carousel");
 
   testimonialsOwl.owlCarousel({
