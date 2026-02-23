@@ -296,237 +296,185 @@
       </nav>
     </header>
 
-    <!-- breadcrumb Section -->
-    <section class="breadcrumbs position-relative">
+    <section>
       <div class="container-fluid">
-        <div class="breadcrumb-wrapper">
-          <div class="overlay">
-            <div class="ln"></div>
-            <div class="ln"></div>
-            <div class="ln"></div>
-          </div>
-          <div class="breadcrumb-cnt">
-            <div class="title text-center mb-md-5 mb-4">
-              <small
-                class="secName mx-auto mb-4 wow animate__fadeInDown"
-                data-wow-duration="1s"
-              >
-                الوظائف
-              </small>
-              <h2 class="secTitle wow animate__fadeInUp" data-wow-duration="1s">
-                انضم إلي فريقنا
-              </h2>
+        <div class="card-wrapper">
+          <!-- breadcrumb Section -->
+          <div class="breadcrumbs">
+            <div class="breadcrumb-wrapper">
+              <div class="overlay">
+                <div class="ln"></div>
+                <div class="ln"></div>
+                <div class="ln"></div>
+              </div>
+              <div class="breadcrumb-cnt">
+                <div class="title text-center mb-md-5 mb-4">
+                  <small
+                    class="secName mx-auto mb-4 wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    الوظائف
+                  </small>
+                  <h2
+                    class="secTitle wow animate__fadeInUp"
+                    data-wow-duration="1s"
+                  >
+                    IT Support & Maintenance Technician
+                  </h2>
+                </div>
+                <div class="tags justify-content-center">
+                  <span>UI/UX</span>
+                  <span>دوام كامل</span>
+                  <span>Mansoura, Ad Dakahlia, Egypt</span>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 text-center mx-auto">
-              <p>
-                انضم إلى فريقنا الملهم من الخبراء والمبدعين، وكون مسارًا وظيفيًا
-                مميزًا يفتح أفاقًا جديدة في عالم التقنية.
-              </p>
-            </div>
           </div>
-        </div>
-      </div>
-    </section>
+          <!-- job details -->
+          <div class="job_details">
+            <div class="job-form contact-form">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <p class="fs-5 text-center">المسؤوليات</p>
+                </div>
+                <div class="card-body list">
+                  <ul>
+                    <li>
+                      <span
+                        >تنفيذ أعمال الصيانة، والتجهيز، وتهيئة أجهزة الكمبيوتر
+                        والطابعات وفقًا لمتطلبات المشروع.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >تثبيت وتهيئة وصيانة أنظمة التشغيل وأدوات الدعم
+                        الفني.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >تشخيص وحل المشكلات المتعلقة بالأجهزة والبرمجيات
+                        والشبكات، مع تصعيد المشكلات المعقدة عند الحاجة.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >تقديم دعم فني سريع وفعّال للمستخدمين النهائيين، وضمان
+                        استمرارية سير العمل.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >متابعة تذاكر الدعم الفني اليومية وتحديث تقارير الصيانة
+                        والخدمة.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >الالتزام بسياسات وإجراءات وتقنيات تكنولوجيا المعلومات
+                        المعتمدة أثناء تنفيذ مهام الدعم.</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        >الحفاظ على توثيق دقيق لإجراءات الدعم وإعدادات
+                        الأنظمة.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="fs-4 main mb-4">قدم الأن</h3>
+              <form id="jobApplicationForm">
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="الاسم"
+                      id="name"
+                      required
+                    />
+                    <span class="text-danger small" id="nameError"></span>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="رقم الهاتف"
+                      id="phone"
+                      required
+                    />
+                    <span class="text-danger small" id="emailError"></span>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="البريد الإلكتروني"
+                      id="email"
+                    />
+                    <span class="text-danger small" id="emailError"></span>
+                  </div>
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="الراتب المتوقع*"
+                      id="expectedSalary"
+                      required
+                    />
+                    <span
+                      class="text-danger small"
+                      id="expectedSalaryError"
+                    ></span>
+                  </div>
+                  <div class="col-12">
+                    <div class="upload-wrapper mb-3">
+                      <div class="upload__box">
+                        ارفق السيرة الذاتيه *
+                        <div class="upload__btn-box">
+                          <button type="button" class="upload__btn">
+                            <i class="bi bi-cloud-upload"></i>
+                            <p class="upload__box_title text-muted">
+                              upload files
+                              <br />
+                              PDF, JPG, PNG, JPEG – maximum 5 MB per file
+                            </p>
+                            <input
+                              type="file"
+                              accept="image/*,.pdf,.doc,.docx"
+                              name="document[]"
+                              multiple
+                              data-max_length="20"
+                              class="upload__inputfile"
+                            />
+                          </button>
+                        </div>
 
-    <!-- jobs -->
-    <section class="jobs py-5">
-      <div class="container-fluid">
-        <!-- محتوى الوظيفه -->
-        <div class="row row-cols-lg-2 row-cols-1 g-4">
-          <!-- job 1 -->
-          <div class="col">
-            <div class="card h-100">
-              <a
-                href="job-details.html"
-                class="link"
-                aria-label="View details for job opportunity in software development"
-              ></a>
-              <div class="card-body">
-                <div class="d-flex flex-column gap-3 flex-md-row">
-                  <div class="job-content job-content">
-                    <h3 class="job-title pt-2 fs-5 fw-bold">
-                      Senior Front-End Developer(react)
-                    </h3>
-                    <div class="info d-flex align-items-center gap-2">
-                      <i class="bi bi-calendar3"></i>
-                      <small class="date">23 Jan , 2026</small>
+                        <div
+                          class="upload__img-wrap row g-3 row-cols-lg-5"
+                        ></div>
+                      </div>
                     </div>
-                    <div class="job-desc cut-txt my-2">
-                      <p>
-                        As a Senior Front-End Developer (Angular), you will
-                        design and develop high-quality, scalable, and
-                        user-friendly web applications. You’ll collaborate
-                        with,..
-                      </p>
-                    </div>
-                    <div class="tags">
-                      <span>UI/UX</span>
-                      <span>دوام كامل</span>
-                      <span>Mansoura, Ad Dakahlia, Egypt</span>
-                    </div>
+                    <span class="text-danger small" id="messageError"></span>
                   </div>
-                  <div class="col-md-auto col-12">
-                    <a
-                      href="job-details.html"
-                      class="main-btn w-100"
-                      aria-label="View details for job opportunity in software development"
+                  <div class="col-auto ms-auto">
+                    <button
+                      type="submit"
+                      class="main-btn mt-4 mx-auto wow animate__fadeInUp"
+                      data-wow-duration="1s"
+                      aria-label="Submit your message to our team"
                     >
-                      <span>قدم الأن</span>
+                      <span> أرسل الأن </span>
                       <img
-                        src="images/icons/arrow-right.svg"
+                        src="images/icons/arrow.svg"
                         alt="arrow right icon"
                       />
-                    </a>
+                    </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- job 2 -->
-          <div class="col">
-            <div class="card h-100">
-              <a
-                href="job-details.html"
-                class="link"
-                aria-label="View details for job opportunity in software development"
-              ></a>
-              <div class="card-body">
-                <div class="d-flex flex-column gap-3 flex-md-row">
-                  <div class="job-content job-content">
-                    <h3 class="job-title pt-2 fs-5 fw-bold">
-                      Senior Front-End Developer(react)
-                    </h3>
-                    <div class="info d-flex align-items-center gap-2">
-                      <i class="bi bi-calendar3"></i>
-                      <small class="date">23 Jan , 2026</small>
-                    </div>
-                    <div class="job-desc cut-txt my-2">
-                      <p>
-                        As a Senior Front-End Developer (Angular), you will
-                        design and develop high-quality, scalable, and
-                        user-friendly web applications. You’ll collaborate
-                        with,..
-                      </p>
-                    </div>
-                    <div class="tags">
-                      <span>UI/UX</span>
-                      <span>دوام كامل</span>
-                      <span>Mansoura, Ad Dakahlia, Egypt</span>
-                    </div>
-                  </div>
-                  <div class="col-md-auto col-12">
-                    <a
-                      href="job-details.html"
-                      class="main-btn w-100"
-                      aria-label="View details for job opportunity in software development"
-                    >
-                      <span>قدم الأن</span>
-                      <img
-                        src="images/icons/arrow-right.svg"
-                        alt="arrow right icon"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- job 3 -->
-          <div class="col">
-            <div class="card h-100">
-              <a
-                href="job-details.html"
-                class="link"
-                aria-label="View details for job opportunity in software development"
-              ></a>
-              <div class="card-body">
-                <div class="d-flex flex-column gap-3 flex-md-row">
-                  <div class="job-content job-content">
-                    <h3 class="job-title pt-2 fs-5 fw-bold">
-                      Senior Front-End Developer(react)
-                    </h3>
-                    <div class="info d-flex align-items-center gap-2">
-                      <i class="bi bi-calendar3"></i>
-                      <small class="date">23 Jan , 2026</small>
-                    </div>
-                    <div class="job-desc cut-txt my-2">
-                      <p>
-                        As a Senior Front-End Developer (Angular), you will
-                        design and develop high-quality, scalable, and
-                        user-friendly web applications. You’ll collaborate
-                        with,..
-                      </p>
-                    </div>
-                    <div class="tags">
-                      <span>UI/UX</span>
-                      <span>دوام كامل</span>
-                      <span>Mansoura, Ad Dakahlia, Egypt</span>
-                    </div>
-                  </div>
-                  <div class="col-md-auto col-12">
-                    <a
-                      href="job-details.html"
-                      class="main-btn w-100"
-                      aria-label="View details for job opportunity in software development"
-                    >
-                      <span>قدم الأن</span>
-                      <img
-                        src="images/icons/arrow-right.svg"
-                        alt="arrow right icon"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- job 4 -->
-          <div class="col">
-            <div class="card h-100">
-              <a
-                href="job-details.html"
-                class="link"
-                aria-label="View details for job opportunity in software development"
-              ></a>
-              <div class="card-body">
-                <div class="d-flex flex-column gap-3 flex-md-row">
-                  <div class="job-content job-content">
-                    <h3 class="job-title pt-2 fs-5 fw-bold">
-                      Senior Front-End Developer(react)
-                    </h3>
-                    <div class="info d-flex align-items-center gap-2">
-                      <i class="bi bi-calendar3"></i>
-                      <small class="date">23 Jan , 2026</small>
-                    </div>
-                    <div class="job-desc cut-txt my-2">
-                      <p>
-                        As a Senior Front-End Developer (Angular), you will
-                        design and develop high-quality, scalable, and
-                        user-friendly web applications. You’ll collaborate
-                        with,..
-                      </p>
-                    </div>
-                    <div class="tags">
-                      <span>UI/UX</span>
-                      <span>دوام كامل</span>
-                      <span>Mansoura, Ad Dakahlia, Egypt</span>
-                    </div>
-                  </div>
-                  <div class="col-md-auto col-12">
-                    <a
-                      href="job-details.html"
-                      class="main-btn w-100"
-                      aria-label="View details for job opportunity in software development"
-                    >
-                      <span>قدم الأن</span>
-                      <img
-                        src="images/icons/arrow-right.svg"
-                        alt="arrow right icon"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -536,9 +484,15 @@
     <!-- TEAM -->
     <section class="our_team py-5 mb-3">
       <div class="container-fluid">
-        <div class="title mb-5">
+        <div class="col-lg-11 col-md-10 m-auto text-center mb-5">
+          <small
+            class="secName mx-auto mb-4 wow animate__fadeInDown"
+            data-wow-duration="1s"
+          >
+            فريق العمل
+          </small>
           <h2 class="secTitle wow animate__fadeInUp" data-wow-duration="1s">
-            فريق عملنا المتميز
+            فريق مبدع
           </h2>
         </div>
         <div class="owl-carousel">

@@ -510,5 +510,117 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // upload and preview multiple images such as dropzone
+  function ImgUpload() {
+  let imgArray = [];
+
+  $(".upload__inputfile").each(function () {
+    const $input = $(this);
+
+    $input.on("change", function (e) {
+      const imgWrap = $input
+        .closest(".upload__box")
+        .find(".upload__img-wrap");
+
+      const maxLength = parseInt($input.attr("data-max_length")) || 20;
+      const files = Array.from(e.target.files);
+
+      files.forEach((file) => {
+        // منع الزيادة عن الحد
+        if (imgArray.length >= maxLength) return;
+
+        // أنواع الملفات المسموحة
+        const allowedTypes = [
+          "image/",
+          "application/pdf",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ];
+
+        const isAllowed = allowedTypes.some((type) =>
+          file.type.startsWith(type)
+        );
+
+        if (!isAllowed) return;
+
+        imgArray.push(file);
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          let previewContent = "";
+
+          // لو صورة
+          if (file.type.startsWith("image/")) {
+            previewContent = `<img src="${e.target.result}" alt="${file.name}" class="w-100 h-100 object-fit-cover">`;
+          } 
+          // لو PDF
+          else if (file.type === "application/pdf") {
+            previewContent = `
+              <div class="file-preview text-center p-3">
+                <i class="bi bi-file-earmark-pdf fs-1 text-danger"></i>
+                <p class="small mt-2 mb-0">${file.name}</p>
+              </div>`;
+          } 
+          // لو Word / CV
+          else {
+            previewContent = `
+              <div class="file-preview text-center p-3">
+                <i class="bi bi-file-earmark-text fs-1 text-primary"></i>
+                <p class="small mt-2 mb-0">${file.name}</p>
+              </div>`;
+          }
+
+          const html = `
+            <div class="col">
+              <div class="upload__img-box position-relative">
+                <div 
+                  class="img-bg border rounded overflow-hidden position-relative"
+                  data-file="${file.name}"
+                  style="height:120px;"
+                >
+                  <span class="upload__img-close position-absolute top-0 end-0 m-1 btn btn-sm btn-danger">×</span>
+                  ${previewContent}
+                </div>
+              </div>
+            </div>
+          `;
+
+          imgWrap.append(html);
+        };
+
+        // لو صورة نقرأها، لو ملف عادي برضه نستخدم readAsDataURL للأيقونة
+        reader.readAsDataURL(file);
+      });
+    });
+  });
+
+  // حذف الملف (يشتغل مع أكتر من upload box)
+  $(document).on("click", ".upload__img-close", function () {
+    const $box = $(this).closest(".upload__box");
+    const inputElement = $box.find(".upload__inputfile")[0];
+    const fileName = $(this).parent().data("file");
+
+    const dt = new DataTransfer();
+
+    // تحديث الأراي
+    imgArray = imgArray.filter((file) => file.name !== fileName);
+
+    // إعادة بناء الملفات داخل input
+    Array.from(inputElement.files).forEach((file) => {
+      if (file.name !== fileName) {
+        dt.items.add(file);
+      }
+    });
+
+    inputElement.files = dt.files;
+
+    // حذف من الواجهة
+    $(this).closest(".col").remove();
+  });
+}
+
+ImgUpload();
+
   new WOW().init();
 });
