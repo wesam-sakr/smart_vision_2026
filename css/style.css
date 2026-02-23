@@ -1848,9 +1848,6 @@ nav.navbar {
   object-fit: contain;
 }
 
-.testimonials.all
-.testimonials.all
-
 /* -- FQA -- */
 .FQA .accordion-item {
   margin-bottom: 1rem;
@@ -2019,6 +2016,13 @@ nav.navbar {
     inset-inline-end: 1.5rem;
     width: 7rem;
   }
+    .about .card {
+    transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+    -moz-transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+    -o-transform: rotate(0deg) !important;
+  }
   .services .service .serv-title::before {
     margin-inline-end: 1.25rem;
   }
@@ -2079,13 +2083,7 @@ nav.navbar {
     border: unset;
   }
 
-  .about .card {
-    transform: rotate(0deg) !important;
-    -webkit-transform: rotate(0deg) !important;
-    -moz-transform: rotate(0deg) !important;
-    -ms-transform: rotate(0deg) !important;
-    -o-transform: rotate(0deg) !important;
-  }
+
 
   .blog-image {
     aspect-ratio: 4 / 3;
